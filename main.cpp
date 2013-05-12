@@ -7,17 +7,14 @@
 
 #include <QtGui>
 
-#include "attitudewidget.h"
-#include "headingwidget.h"
+#include "mainwindow.h"
 
 int main(int argc, char *argv[]) {
 
     QApplication app(argc, argv);
 
-    attitudewidget *a = new attitudewidget();
+    mainwindow *a = new mainwindow();
     a->show();
-    headingwidget *b = new headingwidget();
-    b->show();
 
     return app.exec();
 }

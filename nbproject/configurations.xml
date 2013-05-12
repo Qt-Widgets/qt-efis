@@ -29,6 +29,8 @@
     <itemPath>attitudewidget.h</itemPath>
     <itemPath>headingwidget.cpp</itemPath>
     <itemPath>headingwidget.h</itemPath>
+    <itemPath>mainwindow.cpp</itemPath>
+    <itemPath>mainwindow.h</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
