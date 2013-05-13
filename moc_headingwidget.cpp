@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'headingwidget.h'
 **
-** Created: Mon May 13 16:24:06 2013
+** Created: Mon May 13 16:48:47 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!

@@ -8,6 +8,8 @@
 #include "mainwindow.h"
 
 mainwindow::mainwindow() {
+    setWindowTitle("EFIS");
+    
     a = new attitudewidget();
     b = new headingwidget();
     c = new enginewidget();
