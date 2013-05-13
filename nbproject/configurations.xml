@@ -4,6 +4,10 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>attitudewidget.h</itemPath>
+      <itemPath>enginewidget.h</itemPath>
+      <itemPath>headingwidget.h</itemPath>
+      <itemPath>mainwindow.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -12,7 +16,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>attitudewidget.cpp</itemPath>
+      <itemPath>enginewidget.cpp</itemPath>
+      <itemPath>headingwidget.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
+      <itemPath>mainwindow.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -25,12 +33,6 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
-    <itemPath>attitudewidget.cpp</itemPath>
-    <itemPath>attitudewidget.h</itemPath>
-    <itemPath>headingwidget.cpp</itemPath>
-    <itemPath>headingwidget.h</itemPath>
-    <itemPath>mainwindow.cpp</itemPath>
-    <itemPath>mainwindow.h</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

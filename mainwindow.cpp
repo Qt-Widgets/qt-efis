@@ -10,10 +10,12 @@
 mainwindow::mainwindow() {
     a = new attitudewidget();
     b = new headingwidget();
+    c = new enginewidget();
     
     QHBoxLayout *layout = new QHBoxLayout();
     layout->addWidget(a);
     layout->addWidget(b);
+    layout->addWidget(c);
     QWidget *widget = new QWidget();
     widget->setLayout(layout);
     setCentralWidget(widget);
