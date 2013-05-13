@@ -36,13 +36,21 @@ void enginewidget::paintEvent(QPaintEvent*){
     QBrush pointerbrush(Qt::white);
     painter->setBrush(pointerbrush);
     painter->rotate(135);
-    painter->rotate(throttle);
+    painter->rotate(throttle*1.8);
     QPoint arrow[3] = {QPoint(75, 0), QPoint(65, 5), QPoint(65, -5)};
     painter->drawPolygon(arrow, 3);
 }
 
 void enginewidget::updatewindow(){
     update();
+}
+
+void enginewidget::receivemeasurementsslot(double *measurementspointer) {
+    setmeasurements(measurementspointer);
+}
+
+void enginewidget::setmeasurements(double measurements[]) {
+    throttle = measurements[3];
 }
 
 

@@ -14,6 +14,7 @@ class enginewidget : public QWidget {
     Q_OBJECT
 public:
     enginewidget();
+    void setmeasurements(double measurements[]);
 protected:
     void paintEvent(QPaintEvent*);
 protected slots:
@@ -22,6 +23,8 @@ private:
     QTimer *timer;
     
     double throttle;
+public slots:
+    void receivemeasurementsslot(double *measurementspointer);
 };
 
 #endif	/* ENGINEWIDGET_H */

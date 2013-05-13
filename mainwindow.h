@@ -13,6 +13,7 @@
 #include "attitudewidget.h"
 #include "headingwidget.h"
 #include "enginewidget.h"
+#include "demowidget.h"
 
 class mainwindow : public QMainWindow {
     Q_OBJECT
@@ -21,6 +22,7 @@ public:
     attitudewidget *a;
     headingwidget *b;
     enginewidget *c;
+    demowidget *z;
 private:
 
 };
