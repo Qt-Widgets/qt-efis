@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'demowidget.h'
 **
-** Created: Mon May 13 20:30:34 2013
+** Created: Mon May 13 21:19:48 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!

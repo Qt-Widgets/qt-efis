@@ -38,11 +38,12 @@ void headingwidget::paintEvent(QPaintEvent*){
     QString value;
     for (int i=0; i<36; i+=3) {
         painter->drawLine(0, -60, 0, -65);
-        if (i==0) painter->drawText(0, -70, "N");
-        else if (i==9) painter->drawText(0, -70, "E");
-        else if (i==18) painter->drawText(0, -70, "S");
-        else if (i==27) painter->drawText(0, -70, "W");
-        else painter->drawText(0, -70, value.setNum(i));
+        if (i==0) painter->drawText(-10, -90, 20, 20, Qt::AlignCenter, "N");
+        else if (i==9) painter->drawText(-10, -90, 20, 20, Qt::AlignCenter, "E");
+        else if (i==18) painter->drawText(-10, -90, 20, 20, Qt::AlignCenter, "S");
+        else if (i==27) painter->drawText(-10, -90, 20, 20, Qt::AlignCenter, "W");
+        else painter->drawText(-10, -90, 20, 20, Qt::AlignCenter, value.setNum(i));
+        //else painter->drawText(0, -70, value.setNum(i));
         painter->rotate(10);
         painter->drawLine(0, -63, 0, -65);
         painter->rotate(10);

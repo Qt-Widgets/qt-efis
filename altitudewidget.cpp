@@ -39,7 +39,8 @@ void altitudewidget::paintEvent(QPaintEvent*){
     QString value;
     for(int i = 0; i<=100; i++) {
         painter->drawLine(-20, 0, -10, 0);
-        painter->drawText(0, 0, value.setNum(i));
+        painter->drawText(0, -10, 25, 20, Qt::AlignRight, value.setNum(i));
+        //painter->drawText(0, 0, value.setNum(i));
         painter->translate(0, 20);
     }
 }
