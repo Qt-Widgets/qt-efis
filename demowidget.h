@@ -23,6 +23,8 @@ private:
     QSlider *yawslider;
     QLabel *throttlelabel;
     QSlider *throttleslider;
+    QLabel *altitudelabel;
+    QSlider *altitudeslider;
     QPushButton *resetbutton;
 public slots:
     void resetmeasurements();

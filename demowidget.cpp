@@ -20,6 +20,9 @@ demowidget::demowidget() : QWidget() {
     throttlelabel = new QLabel("Throttle:");
     throttleslider = new QSlider();
     throttleslider->setRange(0, 100);
+    altitudelabel = new QLabel("Altitude:");
+    altitudeslider = new QSlider();
+    altitudeslider->setRange(0, 100);
     resetbutton = new QPushButton("RESET");
     
     QHBoxLayout *layout = new QHBoxLayout();
@@ -31,6 +34,8 @@ demowidget::demowidget() : QWidget() {
     layout->addWidget(yawslider);
     //layout->addWidget(throttlelabel);
     layout->addWidget(throttleslider);
+    //layout->addWidget(altitudelabel);
+    layout->addWidget(altitudeslider);
     //layout->addWidget(resetbutton);
     setLayout(layout);
     
@@ -40,6 +45,7 @@ demowidget::demowidget() : QWidget() {
     connect(rollslider, SIGNAL(valueChanged(int)), this, SLOT(sendmeasurementsslot()));
     connect(yawslider, SIGNAL(valueChanged(int)), this, SLOT(sendmeasurementsslot()));
     connect(throttleslider, SIGNAL(valueChanged(int)), this, SLOT(sendmeasurementsslot()));
+    connect(altitudeslider, SIGNAL(valueChanged(int)), this, SLOT(sendmeasurementsslot()));
 }
 
 void demowidget::resetmeasurements() {
@@ -47,14 +53,16 @@ void demowidget::resetmeasurements() {
     rollslider->setValue(0);
     yawslider->setValue(0);
     throttleslider->setValue(0);
+    altitudeslider->setValue(0);
 }
 
 void demowidget::sendmeasurementsslot() {
-    double measurements[4];
+    double measurements[5];
     measurements[0] = pitchslider->value();
     measurements[1] = rollslider->value();
     measurements[2] = yawslider->value();
     measurements[3] = throttleslider->value();
+    measurements[4] = altitudeslider->value();
     double *measurementspointer = measurements;
     emit sendmeasurementssignal(measurementspointer);
 }

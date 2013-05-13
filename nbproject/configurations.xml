@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>altitudewidget.h</itemPath>
       <itemPath>attitudewidget.h</itemPath>
       <itemPath>demowidget.h</itemPath>
       <itemPath>enginewidget.h</itemPath>
@@ -17,6 +18,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>altitudewidget.cpp</itemPath>
       <itemPath>attitudewidget.cpp</itemPath>
       <itemPath>demowidget.cpp</itemPath>
       <itemPath>enginewidget.cpp</itemPath>
@@ -35,8 +37,6 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
-    <itemPath>altitudewidget.cpp</itemPath>
-    <itemPath>altitudewidget.h</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

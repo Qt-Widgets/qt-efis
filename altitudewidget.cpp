@@ -8,7 +8,7 @@
 #include "altitudewidget.h"
 
 altitudewidget::altitudewidget() : QWidget() {
-    setFixedSize(50, 200);
+    setFixedSize(100, 200);
     
     timer = new QTimer();
     connect(timer, SIGNAL(timeout()), this, SLOT(updatewindow()));
@@ -18,27 +18,30 @@ altitudewidget::altitudewidget() : QWidget() {
 }
 
 void altitudewidget::paintEvent(QPaintEvent*){
-//    QPainter *painter = new QPainter(this);
-//    painter->setWindow(-100, -100, 200, 200);
-//    
-//    QPen backgroundpen(Qt::black, 1, Qt::SolidLine);
-//    painter->setPen(backgroundpen);
-//    QBrush backgroundbrush(Qt::black);
-//    painter->setBrush(backgroundbrush);
-//    painter->drawRect(-100, -100, 200, 200);
-//    
-//    QPen scalepen(Qt::green, 3, Qt::SolidLine);
-//    painter->setPen(scalepen);
-//    painter->drawArc(-75, -75, 150, 150, 45*16, 180*16);
-//    
-//    QPen pointerpen(Qt::white, 1, Qt::SolidLine);
-//    painter->setPen(pointerpen);
-//    QBrush pointerbrush(Qt::white);
-//    painter->setBrush(pointerbrush);
-//    painter->rotate(135);
-//    painter->rotate(throttle*1.8);
-//    QPoint arrow[3] = {QPoint(75, 0), QPoint(65, 5), QPoint(65, -5)};
-//    painter->drawPolygon(arrow, 3);
+    QPainter *painter = new QPainter(this);
+    painter->setWindow(-50, -100, 100, 200);
+    
+    QPen backgroundpen(Qt::black, 1, Qt::SolidLine);
+    painter->setPen(backgroundpen);
+    QBrush backgroundbrush(Qt::black);
+    painter->setBrush(backgroundbrush);
+    painter->drawRect(-50, -100, 100, 200);
+
+    QPen pointerpen(Qt::white, 1, Qt::SolidLine);
+    painter->setPen(pointerpen);
+    QBrush pointerbrush(Qt::white);
+    painter->setBrush(pointerbrush);
+    QPoint arrow[3] = {QPoint(-35, 0), QPoint(-45, 5), QPoint(-45, -5)};
+    painter->drawPolygon(arrow, 3);
+    
+    painter->translate(0, -20*altitude);
+    
+    QString value;
+    for(int i = 0; i<=100; i++) {
+        painter->drawLine(-20, 0, -10, 0);
+        painter->drawText(0, 0, value.setNum(i));
+        painter->translate(0, 20);
+    }
 }
 
 void altitudewidget::updatewindow(){
@@ -50,6 +53,6 @@ void altitudewidget::receivemeasurementsslot(double *measurementspointer) {
 }
 
 void altitudewidget::setmeasurements(double measurements[]) {
-    //altitude = measurements[4];
+    altitude = measurements[4];
 }
 
