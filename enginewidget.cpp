@@ -36,7 +36,7 @@ void enginewidget::paintEvent(QPaintEvent*){
     QBrush pointerbrush(Qt::white);
     painter->setBrush(pointerbrush);
     painter->rotate(135);
-    painter->rotate(0);
+    painter->rotate(throttle);
     QPoint arrow[3] = {QPoint(75, 0), QPoint(65, 5), QPoint(65, -5)};
     painter->drawPolygon(arrow, 3);
 }
