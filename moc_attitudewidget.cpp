@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'attitudewidget.h'
 **
-** Created: Mon May 13 19:15:20 2013
+** Created: Mon May 13 19:52:36 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!

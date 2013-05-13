@@ -13,6 +13,7 @@
 #include "attitudewidget.h"
 #include "headingwidget.h"
 #include "enginewidget.h"
+#include "altitudewidget.h"
 #include "demowidget.h"
 
 class mainwindow : public QMainWindow {
@@ -22,6 +23,7 @@ public:
     attitudewidget *a;
     headingwidget *b;
     enginewidget *c;
+    altitudewidget *d;
     demowidget *z;
 private:
 
